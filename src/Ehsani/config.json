@@ -1,0 +1,10 @@
+{
+  "AppSettings": {
+    "SiteTitle": "Ehsani"
+  },
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-Ehsani-d638db1d-0fa1-4cc4-91bd-f991aff0666e;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+  }
+}
