@@ -7,20 +7,141 @@ $(function () {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
-    var gasp = new JustGage({
-        id: "skill-asp",
+    var gwdev = new JustGage({
+        id: "skill-wdev",
         value: 0,
         min: 0,
         max: 100,
-        title: ".Net",
-        label: "%"
+        title: "Web Development",
+        label: "%",
+        gaugeWidthScale: 0.6,
+        levelColors: [
+                  "#00fff6",
+                  "#6b6b6b  ",
+                  "#474d5d"
+        ]
+    });
+    var gcs = new JustGage({
+        id: "skill-cs",
+        value: 0,
+        min: 0,
+        max: 100,
+        title: "C#.Net",
+        label: "%",
+        gaugeWidthScale: 0.6,
+        levelColors: [
+                  "#00fff6",
+                  "#6b6b6b  ",
+                  "#474d5d"
+        ]
+    });
+    var gwdes = new JustGage({
+        id: "skill-wdes",
+        value: 0,
+        min: 0,
+        max: 100,
+        title: "Web Design",
+        label: "%",
+        gaugeWidthScale: 0.6,
+        levelColors: [
+                  "#00fff6",
+                  "#6b6b6b  ",
+                  "#474d5d"
+        ]
+    });
+    var gscripts = new JustGage({
+        id: "skill-scripts",
+        value: 0,
+        min: 0,
+        max: 100,
+        title: "Scripting Languages",
+        label: "%",
+        gaugeWidthScale: 0.6,
+        levelColors: [
+                  "#00fff6",
+                  "#6b6b6b  ",
+                  "#474d5d"
+        ]
+    });
+    var gsc = new JustGage({
+        id: "skill-sc",
+        value: 0,
+        min: 0,
+        max: 100,
+        title: "Source Controls",
+        label: "%",
+        gaugeWidthScale: 0.6,
+        levelColors: [
+                  "#00fff6",
+                  "#6b6b6b  ",
+                  "#474d5d"
+        ]
+    });
+    var gsql = new JustGage({
+        id: "skill-sql",
+        value: 0,
+        min: 0,
+        max: 100,
+        title: "MSSQL Server",
+        label: "%",
+        gaugeWidthScale: 0.6,
+        levelColors: [
+                  "#00fff6",
+                  "#6b6b6b  ",
+                  "#474d5d"
+        ]
     });
 
+    var gscrum = new JustGage({
+        id: "skill-scrum",
+        value: 0,
+        min: 0,
+        max: 100,
+        title: "SCRUM",
+        label: "%",
+        gaugeWidthScale: 0.6,
+        levelColors: [
+                  "#00fff6",
+                  "#6b6b6b  ",
+                  "#474d5d"
+        ]
+    });
+    var gtools = new JustGage({
+        id: "skill-tools",
+        value: 0,
+        min: 0,
+        max: 100,
+        title: "Tools",
+        label: "%",
+        gaugeWidthScale: 0.6,
+        levelColors: [
+                  "#00fff6",
+                  "#6b6b6b  ",
+                  "#474d5d"
+        ]
+    });
     $(window).scroll(function () {
         var windowScrollTop = $(this).scrollTop();
         var pos = $("#keyskills").offset().top;
         if (windowScrollTop >= pos) {
-            gasp.refresh(99);
+            gwdev.refresh(95);
+            gcs.refresh(85);
+            gscripts.refresh(80);
+            gsql.refresh(75);
+            gwdes.refresh(90);
+            gsc.refresh(80);
+            gtools.refresh(95);
+            gscrum.refresh(80);
+        }
+        else {
+            gwdev.refresh(getRandomInt(0, 10));
+            gcs.refresh(getRandomInt(0, 10));
+            gscripts.refresh(getRandomInt(0, 10));
+            gsql.refresh(getRandomInt(0, 10));
+            gwdes.refresh(getRandomInt(0, 10));
+            gsc.refresh(getRandomInt(0, 10));
+            gtools.refresh(getRandomInt(0, 10));
+            gscrum.refresh(getRandomInt(0, 10));
         }
     });
 });

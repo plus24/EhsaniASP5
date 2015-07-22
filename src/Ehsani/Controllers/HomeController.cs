@@ -19,7 +19,12 @@ namespace Ehsani.Controllers
 
             return View();
         }
+        public IActionResult Media()
+        {
+            ViewBag.Message = "Your application description page.";
 
+            return View();
+        }
         public IActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

@@ -10,3 +10,5 @@
 /// <reference path="lib/site/js/site.js" />
 /// <reference path="lib/justgage/js/justgage.1.0.1.js" />
 /// <reference path="lib/justgage/js/raphael.2.1.0.min.js" />
+/// <reference path="lib/site/js/cbpanimatedheader.js" />
+/// <reference path="lib/site/js/classie.js" />
