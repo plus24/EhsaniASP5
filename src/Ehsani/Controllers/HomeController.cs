@@ -36,5 +36,21 @@ namespace Ehsani.Controllers
         {
             return View("~/Views/Shared/Error.cshtml");
         }
+
+        public JsonResult SendMsg(string name, string email,string phone, string message)
+        {
+            //ir.payamtube.smsSendWebService SMS = new ir.payamtube.smsSendWebService();
+
+            //// Enable Session Status
+            //SMS.CookieContainer = new System.Net.CookieContainer();
+            //// Login
+            //SMS.Login("ehsani", "232425", "payamtube");
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+            //// Send SMS
+            //long SmsId = SMS.SendSingleSms(name + System.Environment.NewLine + email + System.Environment.NewLine + msg, "09138080160", "20003020", ir.payamtube.SmsMode.SaveInPhone);
+            ////Get Credit
+            //string Credit = SMS.getCredit();
+            return Json(new { res = "OK" });
+        }
     }
 }

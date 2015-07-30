@@ -155,3 +155,24 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function () {
     $('.navbar-toggle:visible').click();
 });
+
+function sendmessage() {
+    var name=$("#name").val();
+    var email=$("#email").val();
+    var phone=$("#phone").val();
+    var message=$("#message").val();
+    $.ajax({
+        type: "POST",
+        url: "/Home/SendMsg",
+        data: {name:name,email:email,phone:phone,message:message},
+        success: function (data) {
+            //alert(data);
+            //$('#contactform').html("<div id='message'></div>");
+            //$('#message').html("<p>Your message has been sent!<br /> Thank you - I will be in touch soon.</p>")
+            //.hide()
+            //.fadeIn(1500, function () {
+            //    $('#message');
+            //});
+        }
+    });
+}
